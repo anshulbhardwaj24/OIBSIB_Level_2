@@ -1,0 +1,31 @@
+body {
+    background-image: url("/assets/Historic_bg.jpg"); /* replace with your historic page background image */
+    background-size: cover;
+    margin: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f2efe9;
+    opacity: 0.9;
+  }
+
+.heading{
+    font-family: 'Noto Serif', serif;
+  }
+.img{
+    text-align: center;
+}
+
+.img img{
+    border-radius: 26px;
+    background:linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  27px 27px 100px #5a5a5a,
+             -27px -27px 100px #ffffff;
+    display: inline-block;         
+    max-width: 30%;
+    height:10%;
+  }
+  .Gallery_img{
+    max-width: 95%;
+    height:40%;
+  }  
