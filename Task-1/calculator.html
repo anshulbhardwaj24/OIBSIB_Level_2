@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <!-- bootstrap ui components -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- google Fonts -->
+    <!-- Google API's font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom css and javascript -->
+    <script src="calculator.js"></script>
+    <link rel="stylesheet" href="calculator.css">
+
+</head>
+<body>
+
+    <div class="container my-4 text-center">
+        <h1>Calculator</h1>
+        <div class="calculator container my-5">
+            <div>
+                <input type="text" class="screen" id="result" placeholder="Enter the Numbers" onkeydown="if (event.keyCode === 13) calculate() ; if (event.keyCode === 46 ) clearResult()"><br><br>
+            </div>
+            <div class="buttons">
+                <button class="btn btn_mid btn-secondary" onclick="addToResult('1')">1</button>
+                <button class="btn btn_mid  btn-secondary" onclick="addToResult('2')">2</button>
+                <button class="btn btn_mid  btn-secondary" onclick="addToResult('3')">3</button>
+                <button class="btn btn_mid  btn-info" onclick="addToResult('+')">+</button><br>
+        
+                <button class="btn  btn_mid btn-secondary" onclick="addToResult('4')">4</button>
+                <button class="btn btn_mid  btn-secondary" onclick="addToResult('5')">5</button>
+                <button class="btn btn_mid  btn-secondary" onclick="addToResult('6')">6</button>
+                <button class="btn btn_mid  btn-info" onclick="addToResult('-')">-</button><br>
+        
+                <button class="btn btn_mid  btn-secondary" onclick="addToResult('7')">7</button>
+                <button class="btn btn_mid  btn-secondary" onclick="addToResult('8')">8</button>
+                <button class="btn btn_mid  btn-secondary" onclick="addToResult('9')">9</button>
+                <button class="btn btn_mid  btn-info" onclick="addToResult('*')">*</button><br>
+        
+                <button class="btn btn_mid  btn-secondary" onclick="addToResult('0')">0</button>
+                <button class="btn btn_mid  btn-secondary" onclick="addToResult('00')">00</button>
+                <button class="btn btn_mid  btn-secondary" onkeydown="if (event.keyCode === 8)  removeLast() ">Clr</button>
+                <button class="btn btn_mid  btn-info"  onclick="addToResult('/')">/</button><br>
+
+                <button class="btn btn-danger btn_last" onclick="clearResult()">Clear All</button>
+                <button class="btn btn-success btn_last" onclick="calculate()">=</button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
